@@ -1,0 +1,12 @@
+skill-manifest-version: 1
+skill-id: 6920c02cb8ef7d49de85be70e8087f631927ff4b6f09ecd2c1343fd87408479f
+
+files:
+  459b6abe26c9fe3e253737871482e2ca3465d15b9b309dc43c01ed3eab8a143d  SKILL.md
+  b95d1c3edf931f4120726c370f4d90a1f448318b24510e3ee80e53509982e6ac  assets/create_media_paths_template.md
+  a8ea7cf664b8928eb5a39cb8c8c7221a5a0e4648f64306fd89f2d03c4f919472  assets/km_extended_markdown.md
+  e635c10a41cce0478e9961a5fc464f05887ccf6fa1c9a8debc92f74df9829f34  references/CITADELMD_IN_PLACE_EDIT.md
+  b32af075f83059c890a9e6f27ee1def95ba932663f74eb76a841794e8476b2a9  references/DOCUMENT_STATS.md
+  aea7ee42fb87f9c552fc6fbaeefe74ad748f73353f6826aa6b4728c450ffb0f6  references/MANAGEMENT.md
+  8021a7df1fad829dc34e145dd550087102e893996d578897133aadb3a90f112b  references/PERMISSIONS.md
+  130ecc34b3c863d4f2a170f288a1a2ea2f851650d2e9c825e66292a8ba0056fb  references/SAFE_ROOM.md

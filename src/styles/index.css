@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-meituan: #FF6B00;
+  --color-meituan-light: #FF8C33;
+  --color-meituan-dark: #e55d00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #09090b;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
