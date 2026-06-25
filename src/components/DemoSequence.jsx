@@ -68,24 +68,6 @@ export default function DemoSequence() {
 
   return (
     <div ref={containerRef}>
-      {/* ── Title ───────────────────────────────────────────────────── */}
-      <div className="mb-10 text-center">
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: 6,
-          marginBottom: 14, padding: '5px 14px', borderRadius: 9999,
-          background: '#FFDD00',
-        }}>
-          <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#1c1c1e' }} />
-          <span style={{ fontSize: 12, color: '#1c1c1e', fontWeight: 600 }}>一期改动演示</span>
-        </div>
-        <h2 style={{ fontSize: 22, fontWeight: 700, color: '#1c1c1e', marginBottom: 8, letterSpacing: '-0.01em' }}>
-          从改前到改后的完整交互流程
-        </h2>
-        <p style={{ fontSize: 13, color: 'rgba(60,60,67,0.55)', maxWidth: 480, margin: '0 auto' }}>
-          自动演示黑金会员弹窗、四级真实性标签交互，还原真实用户操作路径。
-        </p>
-      </div>
-
       {/* ── Phone + Annotation layout ────────────────────────────────── */}
       <div className="flex items-start justify-center gap-8 flex-wrap">
         {/* Left: annotation panel */}

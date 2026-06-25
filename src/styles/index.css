@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-meituan: #FF6B00;
+  --color-meituan: #ffdd00;
   --color-meituan-light: #FF8C33;
   --color-meituan-dark: #e55d00;
 }
 
 * {
   box-sizing: border-box;
+  color: #111111;
 }
 
 body {

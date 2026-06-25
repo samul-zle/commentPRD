@@ -11,17 +11,60 @@ import consumePopup    from '../assets/images/consume-popup.png';
 import onsitePopup     from '../assets/images/onsite-popup.png';
 import commentPageImg  from '../assets/images/commentPage.png';
 import truthGuardImg   from '../assets/images/truth-guard-full2.png';
+import memberLogoImg   from '../assets/images/member-logo.gif';
+import commentLogoImg  from '../assets/images/comment-log.png';
+
+// ── 长期方案图片 ────────────────────────────────────────────────────────────
+import longTermPoiImg    from '../assets/images/长期方案/长期poi.png';
+import evaluatorPopup    from '../assets/images/长期方案/评鉴官弹窗.png';
+import evaluatorLogoImg  from '../assets/images/长期方案/评鉴官.gif';
+import evaluatorLandImg  from '../assets/images/长期方案/评鉴官落地页.png';
+import foodiePopup       from '../assets/images/长期方案/美食弹窗.png';
+import foodieLogoImg     from '../assets/images/长期方案/轻食达人.gif';
+import ticketPopup       from '../assets/images/长期方案/门票弹窗.png';
+import ticketLogoImg     from '../assets/images/长期方案/门票切图.gif';
+import hotelPopup        from '../assets/images/长期方案/酒店弹窗.png';
+import hotelLogoImg      from '../assets/images/长期方案/酒店切图.gif';
+import leisurePopup      from '../assets/images/长期方案/休闲玩乐弹窗.png';
+import leisureLogoImg    from '../assets/images/长期方案/休闲玩乐切图.gif';
 
 import { HIGHLIGHT_POSITIONS as HP } from './hotspots.js';
 
 export const IMAGES = {
-  before:       beforeImg,
-  after:        afterImg,
-  member:       memberPopup,
-  consume:      consumePopup,
-  onsite:       onsitePopup,
-  commentPage:  commentPageImg,
-  truthGuard:   truthGuardImg,
+  before:              beforeImg,
+  after:               afterImg,
+  member:              memberPopup,
+  consume:             consumePopup,
+  onsite:              onsitePopup,
+  commentPage:         commentPageImg,
+  truthGuard:          truthGuardImg,
+  // 长期方案
+  longTerm:            longTermPoiImg,
+  evaluator:           evaluatorPopup,
+  evaluatorLanding:    evaluatorLandImg,
+  foodie:              foodiePopup,
+  ticket:              ticketPopup,
+  hotel:               hotelPopup,
+};
+
+// 弹窗顶部独立 logo（member 和 truthGuard 弹窗使用）
+export const LOGOS = {
+  member:      memberLogoImg,
+  onsite:      commentLogoImg,
+  consume:     commentLogoImg,
+  // 长期方案
+  evaluator:   evaluatorLogoImg,
+  foodie:      foodieLogoImg,
+  ticket:      ticketLogoImg,
+  hotel:       hotelLogoImg,
+};
+
+// 右侧说明区：达人品类预览（供 LongTermDemo 右侧卡片使用，2×2 布局）
+export const LONG_TERM_SIDEBAR = {
+  foodie:  { popup: foodiePopup,  logo: foodieLogoImg,  label: '美食达人'    },
+  ticket:  { popup: ticketPopup,  logo: ticketLogoImg,  label: '门票达人'    },
+  hotel:   { popup: hotelPopup,   logo: hotelLogoImg,   label: '酒店达人'    },
+  leisure: { popup: leisurePopup, logo: leisureLogoImg, label: '休闲玩乐达人'  },
 };
 
 export const STEPS = [

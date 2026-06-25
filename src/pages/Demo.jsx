@@ -14,26 +14,19 @@ export default function Demo() {
     <div style={{
       minHeight: '100vh',
       background: '#f2f2f7',
-      paddingTop: 52,
+      paddingTop: 56,
       fontFamily: "'Noto Sans SC', sans-serif",
     }}>
       {/* 页头 */}
-      <div style={{ padding: '32px 24px 0', maxWidth: 1100, margin: '0 auto', textAlign: 'center' }}>
-        <h1 style={{ fontSize: 24, fontWeight: 700, color: '#1c1c1e', marginBottom: 6, letterSpacing: '-0.01em' }}>
-          一期改动 · 手机模拟器演示
-        </h1>
-        <p style={{ fontSize: 13, color: 'rgba(60,60,67,0.55)', marginBottom: 28 }}>
-          会员等级增强 + 四级真实性标签 + 标签说明弹窗
-        </p>
-
+      <div style={{ padding: '16px 24px 0', maxWidth: 1100, margin: '0 auto', textAlign: 'center' }}>
         {/* iOS 分段控制器 */}
         <div style={{
           display: 'inline-flex',
-          background: 'rgba(118,118,128,0.12)',
+          background: 'white',
           borderRadius: 10,
           padding: 3,
           gap: 2,
-          marginBottom: 40,
+          marginBottom: 20,
         }}>
           {TABS.map(tab => (
             <button
@@ -49,7 +42,7 @@ export default function Demo() {
                 fontWeight: activeTab === tab.key ? 600 : 400,
                 color: '#1c1c1e',
                 background: activeTab === tab.key
-                  ? '#fff'
+                  ? '#ffdd00'
                   : 'transparent',
                 boxShadow: activeTab === tab.key
                   ? '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08)'

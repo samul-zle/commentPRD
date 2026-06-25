@@ -13,7 +13,7 @@ export default function HighlightOverlay({ top, left, width, height }) {
       <div
         className="absolute inset-0 rounded-lg"
         style={{
-          border: '2px solid #FF6B00',
+          border: '2px solid #ffdd00',
           boxShadow: '0 0 0 1px rgba(255,107,0,0.3), 0 0 12px rgba(255,107,0,0.25)',
         }}
       />
@@ -43,7 +43,7 @@ export default function HighlightOverlay({ top, left, width, height }) {
         <div
           key={i}
           className="absolute h-2 w-2 rounded-sm"
-          style={{ ...pos, background: '#FF6B00' }}
+          style={{ ...pos, background: '#ffdd00' }}
         />
       ))}
     </motion.div>

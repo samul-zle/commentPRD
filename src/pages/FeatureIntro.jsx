@@ -23,7 +23,7 @@ function Reveal({ children, delay = 0, className = '' }) {
 function DataBadge({ value, label }) {
   return (
     <div className="flex flex-col items-start gap-1 px-5 py-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm min-w-[160px]">
-      <span className="text-3xl font-bold text-[#FF6B00] tracking-tight">{value}</span>
+      <span className="text-3xl font-bold text-[#ffdd00] tracking-tight">{value}</span>
       <span className="text-xs text-zinc-400 leading-snug">{label}</span>
     </div>
   );
@@ -35,7 +35,7 @@ function PainCard({ icon, title, body }) {
     <div className="p-5 rounded-xl border border-white/8 bg-white/[0.03] hover:bg-white/[0.06] transition-colors duration-300">
       <div
         className="text-xs font-mono font-bold mb-3"
-        style={{ color: '#FF6B00', letterSpacing: '0.05em' }}
+        style={{ color: '#ffdd00', letterSpacing: '0.05em' }}
       >
         {icon}
       </div>
@@ -50,19 +50,19 @@ function PhaseItem({ phase, label, badge, items, active }) {
   return (
     <div className={`flex-1 p-5 rounded-xl border transition-all duration-300 ${
       active
-        ? 'border-[#FF6B00]/40 bg-[#FF6B00]/5'
+        ? 'border-[#ffdd00]/40 bg-[#ffdd00]/5'
         : 'border-white/8 bg-white/[0.02]'
     }`}>
       <div className="flex items-center justify-between mb-3">
         <span className={`text-xs font-mono px-2 py-0.5 rounded-full border ${
           active
-            ? 'border-[#FF6B00]/50 text-[#FF6B00] bg-[#FF6B00]/10'
+            ? 'border-[#ffdd00]/50 text-[#ffdd00] bg-[#ffdd00]/10'
             : 'border-zinc-700 text-zinc-500 bg-zinc-800/50'
         }`}>
           {phase}
         </span>
         {badge && (
-          <span className="text-[10px] bg-[#FF6B00] text-white px-2 py-0.5 rounded-full font-medium">
+          <span className="text-[10px] bg-[#ffdd00] text-white px-2 py-0.5 rounded-full font-medium">
             {badge}
           </span>
         )}
@@ -74,7 +74,7 @@ function PhaseItem({ phase, label, badge, items, active }) {
         {items.map((item, i) => (
           <li key={i} className="flex items-start gap-2">
             <span className={`mt-[5px] h-1.5 w-1.5 rounded-full flex-shrink-0 ${
-              active ? 'bg-[#FF6B00]' : 'bg-zinc-700'
+              active ? 'bg-[#ffdd00]' : 'bg-zinc-700'
             }`} />
             <span className={`text-xs leading-relaxed ${active ? 'text-zinc-300' : 'text-zinc-600'}`}>
               {item}
@@ -89,7 +89,7 @@ function PhaseItem({ phase, label, badge, items, active }) {
 // ─── Feature bento card ────────────────────────────────────────────────────
 function FeatureCard({ tag, title, body, visual, wide = false }) {
   return (
-    <div className={`${wide ? 'col-span-1 md:col-span-2' : 'col-span-1'} p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.01] flex flex-col gap-4 group hover:border-[#FF6B00]/30 transition-all duration-300`}>
+    <div className={`${wide ? 'col-span-1 md:col-span-2' : 'col-span-1'} p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.01] flex flex-col gap-4 group hover:border-[#ffdd00]/30 transition-all duration-300`}>
       <div className="flex items-center justify-between">
         <span className="text-[10px] font-mono tracking-wider uppercase text-zinc-500 bg-zinc-800/60 px-2 py-1 rounded-md">
           {tag}
@@ -134,7 +134,7 @@ function CompetitorRow({ brand, features, status }) {
 // ─── Tag level visual ──────────────────────────────────────────────────────
 function TagLevels() {
   const levels = [
-    { label: '消费凭证', color: '#FF6B00', opacity: 1, sub: 'LV.1 最高' },
+    { label: '消费凭证', color: '#ffdd00', opacity: 1, sub: 'LV.1 最高' },
     { label: '消费后评价', color: '#FF8C33', opacity: 0.85, sub: 'LV.2' },
     { label: '现场拍摄', color: '#FFB266', opacity: 0.65, sub: 'LV.3' },
     { label: '现场评价', color: '#FFD9B3', opacity: 0.45, sub: 'LV.4' },
@@ -209,7 +209,7 @@ function ExperimentTable() {
           {rows.map((row, i) => (
             <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
               <td className="py-3 pr-4">
-                <span className={`font-medium ${i < 3 ? 'text-[#FF6B00]' : 'text-zinc-500'}`}>
+                <span className={`font-medium ${i < 3 ? 'text-[#ffdd00]' : 'text-zinc-500'}`}>
                   {row.group}
                 </span>
               </td>
@@ -217,7 +217,7 @@ function ExperimentTable() {
               <td className="py-3 pr-4">
                 <span className={`px-2 py-0.5 rounded-full border text-[10px] ${
                   i < 3
-                    ? 'border-[#FF6B00]/30 text-[#FF6B00] bg-[#FF6B00]/10'
+                    ? 'border-[#ffdd00]/30 text-[#ffdd00] bg-[#ffdd00]/10'
                     : 'border-zinc-700 text-zinc-600'
                 }`}>
                   {row.traffic}
@@ -252,7 +252,7 @@ export default function FeatureIntro() {
         {/* Background glow */}
         <div
           className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[900px] rounded-full opacity-10"
-          style={{ background: 'radial-gradient(ellipse, #FF6B00 0%, transparent 70%)' }}
+          style={{ background: 'radial-gradient(ellipse, #ffdd00 0%, transparent 70%)' }}
         />
 
         <motion.div
@@ -261,16 +261,16 @@ export default function FeatureIntro() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           {/* PRD tag */}
-          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full border border-[#FF6B00]/30 bg-[#FF6B00]/10">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#FF6B00] animate-pulse" />
-            <span className="text-xs text-[#FF6B00] font-medium">PRD - 一期方案</span>
+          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full border border-[#ffdd00]/30 bg-[#ffdd00]/10">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#ffdd00] animate-pulse" />
+            <span className="text-xs text-[#ffdd00] font-medium">PRD - 一期方案</span>
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-4 max-w-3xl">
             写评人身份
             <br />
-            <span style={{ color: '#FF6B00' }}>标识体系升级</span>
+            <span style={{ color: '#ffdd00' }}>标识体系升级</span>
           </h1>
 
           {/* Subtitle */}
@@ -290,7 +290,7 @@ export default function FeatureIntro() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => navigate('/demo')}
-              className="px-6 py-3 rounded-xl bg-[#FF6B00] text-white text-sm font-semibold hover:bg-[#e55d00] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-orange-900/30"
+              className="px-6 py-3 rounded-xl bg-[#ffdd00] text-white text-sm font-semibold hover:bg-[#e55d00] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-orange-900/30"
             >
               查看交互 Demo
             </button>
@@ -418,7 +418,7 @@ export default function FeatureIntro() {
                   <div className="flex flex-col gap-2">
                     {['真实消费 验证身份', '严格审查 守护真实', '客观算分 科学公正', '全民监督 共建真实'].map((item, i) => (
                       <div key={i} className="flex items-center gap-2">
-                        <span className="text-[10px] text-[#FF6B00] font-mono w-4">{String(i+1).padStart(2,'0')}</span>
+                        <span className="text-[10px] text-[#ffdd00] font-mono w-4">{String(i+1).padStart(2,'0')}</span>
                         <span className="text-[10px] text-zinc-400">{item}</span>
                       </div>
                     ))}
@@ -435,7 +435,7 @@ export default function FeatureIntro() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {['到餐美食', '服务零售', '酒店预订', '门票/玩乐'].map((scene, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#FF6B00]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#ffdd00]" />
                     <span className="text-xs text-zinc-400">{scene}</span>
                   </div>
                 ))}
@@ -506,7 +506,7 @@ export default function FeatureIntro() {
                   { label: '实验组 C vs 对照组', desc: '验证全量功能联动效果及最优组合方案' },
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col gap-1">
-                    <span className="text-xs font-medium text-[#FF6B00]">{item.label}</span>
+                    <span className="text-xs font-medium text-[#ffdd00]">{item.label}</span>
                     <span className="text-xs text-zinc-600">{item.desc}</span>
                   </div>
                 ))}
@@ -518,7 +518,7 @@ export default function FeatureIntro() {
         {/* ─── Bottom CTA ───────────────────────────────────────────── */}
         <section>
           <Reveal>
-            <div className="relative overflow-hidden rounded-2xl border border-[#FF6B00]/20 bg-gradient-to-br from-[#FF6B00]/10 via-[#FF6B00]/5 to-transparent p-8 text-center">
+            <div className="relative overflow-hidden rounded-2xl border border-[#ffdd00]/20 bg-gradient-to-br from-[#ffdd00]/10 via-[#ffdd00]/5 to-transparent p-8 text-center">
               <div
                 className="pointer-events-none absolute inset-0 rounded-2xl"
                 style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(255,107,0,0.15), transparent 60%)' }}
@@ -531,7 +531,7 @@ export default function FeatureIntro() {
               </p>
               <button
                 onClick={() => navigate('/demo')}
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#FF6B00] text-white text-sm font-semibold hover:bg-[#e55d00] active:scale-[0.98] transition-all duration-200 shadow-xl shadow-orange-900/30"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#ffdd00] text-white text-sm font-semibold hover:bg-[#e55d00] active:scale-[0.98] transition-all duration-200 shadow-xl shadow-orange-900/30"
               >
                 查看交互 Demo
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -548,7 +548,7 @@ export default function FeatureIntro() {
       <footer className="border-t border-white/6 px-6 py-6 max-w-6xl mx-auto">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="h-5 w-5 rounded-full" style={{ background: '#FF6B00' }} />
+            <div className="h-5 w-5 rounded-full" style={{ background: '#ffdd00' }} />
             <span className="text-xs text-zinc-600">美团 · LBS-评价产品</span>
           </div>
           <span className="text-xs text-zinc-700">写评人身份标识体系升级 · PRD v1.0 · 2026-06-23</span>
