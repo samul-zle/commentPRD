@@ -2,11 +2,12 @@ import { motion } from 'motion/react';
 import { IMAGES } from '../constants/demoScript.js';
 
 export default function BottomSheet({ type, onDismiss }) {
-  const imageSrc = IMAGES[type];
+  const imageSrc     = IMAGES[type];
+  const isTruthGuard = type === 'truthGuard';
 
   return (
     <>
-      {/* 蒙层 */}
+      {/* 蒙层：点击关闭 */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -36,19 +37,54 @@ export default function BottomSheet({ type, onDismiss }) {
           zIndex: 10,
         }}
       >
-        {imageSrc && (
-          <img
-            src={imageSrc}
-            alt="弹窗内容"
+        {/* 右上角关闭按钮（位于 clip 层外侧，不受 overflow:hidden 裁切）*/}
+        {onDismiss && (
+          <button
+            onClick={onDismiss}
+            aria-label="关闭"
             style={{
-              width: '100%',
-              height: 'auto',
-              display: 'block',
-              pointerEvents: 'none',
+              position: 'absolute',
+              top: 10,
+              right: 10,
+              zIndex: 11,
+              width: 26,
+              height: 26,
+              borderRadius: '50%',
+              border: 'none',
+              background: 'rgba(0,0,0,0.35)',
+              color: '#fff',
+              fontSize: 12,
+              fontWeight: 700,
+              lineHeight: 1,
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
-            draggable={false}
-          />
+          >
+            ✕
+          </button>
         )}
+
+        {/* truthGuard：上圆角 clip 层（包住可滚动区，使圆角裁切生效）*/}
+        <div style={isTruthGuard ? { borderRadius: '20px 20px 0 0', overflow: 'hidden' } : {}}>
+          {/* truthGuard 限高 500 + 可滚动；其余弹窗不限高 */}
+          <div style={isTruthGuard ? { maxHeight: 500, overflowY: 'auto' } : {}}>
+            {imageSrc && (
+              <img
+                src={imageSrc}
+                alt="弹窗内容"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  pointerEvents: 'none',
+                }}
+                draggable={false}
+              />
+            )}
+          </div>
+        </div>
       </motion.div>
     </>
   );

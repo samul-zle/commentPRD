@@ -7,7 +7,7 @@ import AnnotationPanel from './AnnotationPanel.jsx';
 import ReplayButton from './ReplayButton.jsx';
 
 // Steps that show a click ripple animation
-const CLICK_STEPS = new Set([2, 7, 10]);
+const CLICK_STEPS = new Set([2, 7, 10, 14]);
 
 export default function DemoSequence() {
   const [currentStep, setCurrentStep] = useState(-1);

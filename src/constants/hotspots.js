@@ -3,7 +3,7 @@
  *
  * 分两部分：
  *   HIGHLIGHT_POSITIONS — 仅坐标，供自动演示（demoScript）引用高亮位置
- *   BEFORE_HOTSPOTS     — 改前：无可交互区域（改前状态所有标识均为静态）
+ *   BEFORE_HOTSPOTS     — 改前：无可交互高亮区（改前状态所有标识均为静态）
  *   AFTER_HOTSPOTS      — 改后：三个可点击区域
  *
  * 只改这里，自动演示和自由探索同步生效。
@@ -18,7 +18,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // 视觉高亮位置（仅供自动演示用，不是可交互热区）
 // ─────────────────────────────────────────────────────────────────────────────
-export const HIGHLIGHT_POSITIONS = {
+export const HIGHLIGHT_POSITIONS = {  
   // 黑金会员 badge —— 第一条评价的用户信息行
   member_before: {
     top: '40.5%', left: '33%', width: '19%', height: '3%',
@@ -42,11 +42,26 @@ export const HIGHLIGHT_POSITIONS = {
     top: '43.5%', left: '36%', width: '14%', height: '2%',
     clickAt: { top: '43.7%', left: '42%' },
   },
+
+  // 「美团致力于呈现真实评价」文案 —— 在 commentPage.png 评价区顶部
+  comment_truth_slogan: {
+    top: '55%', left: '55%', width: '44%', height: '4%',
+    clickAt: { top: '56.5%', left: '77%' },
+  },
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 评价卡片区域（在 before-poi / after-poi 上，用于跳转到 commentPage）
+// invisible: true 表示不渲染任何视觉样式，仅作为透明点击区
+// ─────────────────────────────────────────────────────────────────────────────
+export const REVIEW_CARD_ZONE = {
+  top: '47%', left: '2%', width: '96%', height: '28%',
+  clickAt: { top: '60%', left: '50%' },
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 改前视图（before-poi.png）
-// 无可交互热区 —— 改前状态所有标识均为静态文字，这正是本次改动要解决的问题
+// 无可交互高亮热区 —— 改前标识为静态文字，这正是本次改动要解决的问题
 // ─────────────────────────────────────────────────────────────────────────────
 export const BEFORE_HOTSPOTS = [];
 
@@ -95,7 +110,7 @@ export const AFTER_HOTSPOTS = [
   },
 ];
 
-// 按 view 取用
+// 按 view 取用（自由探索模式）
 export const HOTSPOTS = {
   before: BEFORE_HOTSPOTS,
   after:  AFTER_HOTSPOTS,
